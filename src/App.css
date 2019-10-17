@@ -1,0 +1,19 @@
+.header{
+  background-color: black;
+  height: auto;
+  padding: 5px;
+}
+.header > h1{
+  color:white;
+}
+.footer{
+  background-color: black;
+  padding: 5px 0px; 
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+}
+.footer > p{
+  color: grey;
+  text-align: center;
+}
