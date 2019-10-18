@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
+import Landing from './components/landing';
+import Home from "./components/home";
+import Login from "./components/login";
+import SignUp from "./components/signUp";
+import Navigation from "./components/navigation";
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -13,15 +19,15 @@ class App extends Component {
   render(){
       return (
       <div className="App">
-
-          <BrowserRouter>
-            <div>
-              <Route path="/" component={Tacos} />
-            </div>
-          </BrowserRouter>
-
         <Header/>
-        <h1>hello world</h1>
+          <Router>
+            <div>
+              <Route exact path="/" component={Landing} />
+              <Route path="/login" component={Login} />
+              <Route path="/signUp" component={SignUp} />
+              <Route path="/home" component={Home} />
+            </div>
+          </Router>
         <Footer/>
       </div>
     );
